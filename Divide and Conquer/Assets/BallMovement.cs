@@ -11,7 +11,8 @@ public class BallMovement : MonoBehaviour {
       
     // Use this for initialization
 
-    void Start () { 
+    void Start () {
+        PolygonCollider2D p = new PolygonCollider2D();
         rb2d = GetComponent<Rigidbody2D>();
         rb2d.AddForce(new Vector2(25, 25));
 
@@ -21,6 +22,8 @@ public class BallMovement : MonoBehaviour {
 	void Update () {
         
 	}
+
+    
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
